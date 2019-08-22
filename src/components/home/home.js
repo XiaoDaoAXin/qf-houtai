@@ -5,7 +5,10 @@ import { Route, Switch, Link } from 'dva/router';
 //路由页面
 import ProblemPage from '../Efrom/Problem';
 import ItemUploadPage from "../Efrom/ItemUpload";
-import Weekly from "../Efrom/Weekly";
+import WeeklyPage from "../Efrom/Weekly";
+import IndexPage from "../Efrom/Index";
+import LeavePage from "../Efrom/Leave";
+//左侧菜单数据
 import nav from "./nav.js";
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
@@ -90,6 +93,7 @@ export default class SiderDemo extends React.Component {
                                     type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
                                     onClick={this.toggle}
                                 />
+                                {/*----------- 面包屑----------- */}
                                 <Breadcrumb style={{ float: 'left', marginLeft: '20px', height: '40px', lineHeight: '40px', verticalAlign: 'middle' }}>
                                     <Breadcrumb.Item>学员后台</Breadcrumb.Item>
                                     <Breadcrumb.Item>
@@ -109,7 +113,10 @@ export default class SiderDemo extends React.Component {
                                 <Switch>
                                     <Route path="/problem" component={ProblemPage}></Route>
                                     <Route path='/itemupload' component={ItemUploadPage}></Route>
-                                    <Route path-='/weekly' component={Weekly}></Route>                                </Switch>
+                                    <Route path='/weekly' component={WeeklyPage}></Route>
+                                    <Route path='/index' component={IndexPage}></Route>
+                                    <Route path='/leave' component={LeavePage}></Route>
+                                </Switch>
                             </Content>
                         </Layout>
                     </Layout>

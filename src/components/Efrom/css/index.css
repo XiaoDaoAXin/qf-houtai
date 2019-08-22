@@ -1,0 +1,9 @@
+#userInfo {
+  color: red;
+  font-size: 30px;
+  vertical-align: middle;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
